@@ -2,16 +2,16 @@
     <div class="root">
         <b-row>
             <b-col cols="6">
-                <strong><slot name="school-name"></slot></strong>
+                <strong>{{ schoolName }}</strong>
             </b-col>
-            <b-col cols="6" align="right">
-                <slot name="time"></slot>
+            <b-col cols="6" align="right" v-if="time">
+                {{ time }}
+            </b-col>
+            <b-col cols="12" v-if="special">
+                <p><em>Chuy&ecirc;n ng&agrave;nh: {{ special }}</em></p>
             </b-col>
             <b-col cols="12">
-                <p><em>Chuy&ecirc;n ng&agrave;nh: <slot name="specialized"></slot></em></p>
-            </b-col>
-            <b-col cols="12">
-                <slot name="content"></slot>
+                {{ content }}
             </b-col>
         </b-row>
     </div>
@@ -19,7 +19,8 @@
 
 <script>
     export default {
-        name: "DetailComponent"
+        name: "DetailComponent",
+        props: ['schoolName', 'time', 'special', 'content']
     }
 </script>
 

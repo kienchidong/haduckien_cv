@@ -1,6 +1,6 @@
 <template>
-    <div class="root">
-        <section class="text-left">
+    <div class="root text-left">
+        <section >
             <h4>Mục Tiêu Nghề nghiệp:</h4>
             <hr>
             <p>
@@ -14,20 +14,14 @@
             </ul>
             </p>
         </section>
-        <section class="text-left">
+        <section >
             <h4>Học Vấn:</h4>
             <hr>
-            <detail-component>
-                <template v-slot:school-name>
-                    Đại Học Mỏ Địa Chất
-                </template>
-                <template v-slot:time>
-                    9/2015 - Nay
-                </template>
-                <template v-slot:specialized>
-                    Công Nghệ Phần Mềm
-                </template>
-            </detail-component>
+            <detail-component
+            school-name="Đại Học Mỏ Địa Chất"
+            time=" 9/2015 - Hiện tại"
+            special="Công Nghệ Phần Mềm"
+            />
         </section>
     </div>
 </template>
